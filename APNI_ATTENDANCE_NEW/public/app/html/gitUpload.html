@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.myDropdownHandle').dropdown('toggle');
+        });
+    </script>
+
+    <link rel="stylesheet" href="../style/sidenav.css">
+	
+
+</head>
+
+
+
+<body style='margin:30px'>
+
+	<div id="navigationBar">
+
+	</div>
+
+	<center>
+		<div class="panel panel-default" style="border-radius: 10px;box-shadow: 10px; ">
+			<div class="panel-heading">
+				<center>
+					<h1>Upload Your Face</h1>
+				</center>
+			</div>
+			<div class="panel-body" style="width:fit-content;">
+				<hr>
+				<video id="video" width="50%" height="50%" autoplay="autoplay" loop preload="metadata"
+					class="img-thumbnail"></video>
+				<hr>
+				<div id="show-snap-shot"> <canvas id="myCanvas" width="800" height="800" class="img-thumbnail"></canvas>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<center>
+					<button class="btn btn-primary btn-lg" id="startWebCam">Start WebCam</button>
+					<button class="btn btn-primary btn-lg" id="stopWebCam">Stop WebCam</button>
+					<button class="btn btn-primary btn-lg" id="capture">Take Snapshot</button>
+				</center>
+			</div>
+
+		</div>
+
+	</center>
+
+
+
+
+
+	<script src="../script/sidenav.js"></script>
+	<script src="../script/index.js"></script>
+
+
+
+	<script type="module" src="../script/gitUpload.js"></script>
+	<script>
+		function loadPage(href) {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", href, false);
+			xmlhttp.send();
+			return xmlhttp.responseText;
+		};
+	
+		document.getElementById('navigationBar').innerHTML =
+			loadPage('../html/navigation.html');
+	</script>
+</body>
+
+</html>

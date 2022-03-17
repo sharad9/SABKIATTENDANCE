@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.myDropdownHandle').dropdown('toggle');
+		});
+	</script>
+
+	<link rel="stylesheet" href="../style/sidenav.css">
+
+
+</head>
+
+
+<body style='margin:30px'>
+
+	<div id="navigationBar">
+
+	</div>
+
+	<div class="well well-sm"
+		style="background-image: url(../assets/class_raising_hands_300_wht.gif);background-size: contain;background-repeat: no-repeat; background-position: bottom;">
+
+		<div class="well well-sm">
+			<center>
+				<h3>Mark Your Attendance</h3>
+
+
+				<br>
+				<br>
+
+				<button class="btn btn-primary" id="get-location" name="location">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+						<path
+							d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+					</svg>
+					<span class="visually-hidden">Mark Present</span>
+				</button>
+
+			</center>
+
+		</div>
+
+		<div class="quickstart-user-details-container">
+			Firebase sign-in status: <span id="quickstart-sign-in-status">Signed out</span>
+			<div>Firebase auth <code>currentUser</code> object value:</div>
+			<pre><code id="user-position">null</code></pre>
+			<pre><code id="quickstart-account-details">null</code></pre>
+			<pre><code id="users-list">null</code></pre>
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+	<script src="../script/sidenav.js"></script>
+	<script src="../script/index.js"></script>
+
+	<script type="module" src="../script/raiseHand.js"></script>
+
+	<script>
+		function loadPage(href) {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", href, false);
+			xmlhttp.send();
+			return xmlhttp.responseText;
+		};
+	
+		document.getElementById('navigationBar').innerHTML =
+			loadPage('../html/navigation.html');
+	</script>
+
+
+</body>
+
+</html>

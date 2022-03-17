@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js">
+	</script>
+	<style type="text/css">
+		.bs-example {
+			margin: 20px;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="bs-example">
+		<div class="panel panel-default"
+			style="background-image: url(../assets/class_raising_hands_300_wht.gif);background-size: contain;background-repeat: no-repeat; background-position: bottom;">
+			<!-- Default panel contents -->
+			<div class="panel-heading">
+				<center>
+					<a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=sharad1910030@akgec.ac.in&tf=1
+">Contact Info: sharad1910030@akgec.ac.in</a>
+					<code><sup><i> Beta Version &#169;</i> </sup></code><br>
+					<h3>Apni Attendance For AKGEC</h3>
+				</center>
+
+			</div>
+			<div class="panel-body">
+
+			</div>
+			<!-- List group -->
+			<div class="list-group">
+				<center>
+
+
+
+
+
+
+
+					<button type="button" id="reset" class="btn btn-primary" onclick="navigateTo(this.id)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+							<path
+								d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z" />
+						</svg>
+						Reset
+					</button>
+					<br>
+					<hr>
+
+
+					<button type="button" id="signIn" class="btn btn-primary" onclick="navigateTo(this.id)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+							<path fill-rule="evenodd"
+								d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+						</svg>
+						Sign In
+					</button>
+					<br>
+					<hr>
+
+					<button type="button" id="register" class="btn btn-primary" onclick="navigateTo(this.id)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z" />
+							<path
+								d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+							<path
+								d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+						</svg>
+						Register
+					</button>
+					<br>
+					<hr>
+
+
+					<button type="button" id="recognize" class="btn btn-primary" onclick="navigateTo(this.id)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+							<path fill-rule="evenodd"
+								d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+						</svg>
+						Recognize
+					</button>
+					<br>
+					<hr>
+
+
+					<button type="button" id="raiseHand" class="btn btn-primary" onclick="navigateTo(this.id)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-hand-index-fill" viewBox="0 0 16 16">
+							<path
+								d="M8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v5.34l-1.2.24a1.5 1.5 0 0 0-1.196 1.636l.345 3.106a2.5 2.5 0 0 0 .405 1.11l1.433 2.15A1.5 1.5 0 0 0 6.035 16h6.385a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5.114 5.114 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.632 2.632 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046l-.048.002z" />
+						</svg>
+						MarkPresent
+					</button>
+					<br>
+					<hr>
+
+
+
+					<button type="button" id="gitUpload" class="btn btn-primary" onclick="navigateTo(this.id)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+							<path fill-rule="evenodd"
+								d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+						</svg>
+						Upload Your Pic
+					</button>
+					<br>
+					<hr>
+					<button type="button" id="reported" class="btn btn-primary" onclick="navigateTo(this.id)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-person-lines-fill" viewBox="0 0 16 16" onclick="navigateTo(this.id)">
+							<path
+								d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+						</svg>
+						Reported-Students
+					</button>
+
+
+
+
+
+				</center>
+			</div>
+		</div>
+	</div>
+
+	<script src="../script/index.js"></script>
+
+</body>
+
+</html>

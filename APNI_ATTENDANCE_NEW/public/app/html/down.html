@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+	<?php
+	$fp = fopen('lidn.txt', 'w');
+	fwrite($fp, 'Cats chase mice');
+	fclose($fp);
+	$content = "some text here";
+$fp = fopen($_SERVER['DOCUMENT_ROOT'] . "/myText.txt","wb");
+fwrite($fp,$content);
+fclose($fp);
+	?>
+	<script>
+		var source = 'https://firebasestorage.googleapis.com/v0/b/apniattendance.appspot.com/o/Sharad%2FWIN_20220201_01_01_58_Pro.jpg?alt=media&token=ac9c2cd7-39bf-44b3-9e70-4fd030b712f2';
+		var DOWNLOAD_DIR = '../Sharad/';
+
+		function download(source) {
+			const fileName = source.split('/').pop();
+			var el = document.createElement("a");
+			el.setAttribute("href", source);
+			el.setAttribute("download", fileName);
+			document.body.appendChild(el);
+			el.click();
+			el.remove();
+		}
+		download(source);
+	</script>
+</body>
+
+</html>

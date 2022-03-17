@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.myDropdownHandle').dropdown('toggle');
+		});
+	</script>
+
+	<link rel="stylesheet" href="../style/sidenav.css">
+	<style>
+		canvas {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+	
+		}
+	</style>
+
+</head>
+
+
+<body style='margin:30px'>
+
+	<div id="navigationBar">
+
+	</div>
+
+	<div class="well well-sm"
+		style="background-image: url(../assets/class_raising_hands_300_wht.gif);background-size: contain;background-repeat: no-repeat; background-position: bottom;width: fit-content;">
+
+		<center>
+			<div class="panel panel-default" style="border-radius: 10px;box-shadow: 10px; width: fit-content;">
+				<div class="panel-heading">
+					<center>
+						<h1>Face Recognition</h1>
+					</center>
+				</div>
+				<div class="panel-body" style="width: fit-content;height: fit-content;">
+
+					<video width=800 height=1200 id="video" autoplay="autoplay" loop preload="metadata"></video>
+					<div id="show-snap-shot"> <canvas id="myCanvas" width=800 height=1200></canvas></div>
+				</div>
+				<div class="panel-footer">
+					<center>
+						<button class="btn btn-primary btn-lg" id="startWebCam">Start WebCam</button>
+						<button class="btn btn-primary btn-lg" id="stopWebCam">Stop WebCam</button>
+						<button class="btn btn-primary btn-lg" id="find">Take Snapshot</button>
+					</center>
+				</div>
+
+			</div>
+
+		</center>
+
+	</div>
+
+
+
+
+	<script src="../script/sidenav.js"></script>
+	<script src="../script/index.js"></script>
+	<script src="../script/face-api.min.js"></script>
+	<script type="module" src="../script/recognize.js"></script>
+	<script>
+		function loadPage(href) {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", href, false);
+			xmlhttp.send();
+			return xmlhttp.responseText;
+		};
+	
+		document.getElementById('navigationBar').innerHTML =
+			loadPage('../html/navigation.html');
+	</script>
+</body>
+
+</html>

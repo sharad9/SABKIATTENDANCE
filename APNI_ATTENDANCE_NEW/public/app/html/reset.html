@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.myDropdownHandle').dropdown('toggle');
+		});
+	</script>
+
+	<link rel="stylesheet" href="../style/sidenav.css">
+
+</head>
+
+
+
+
+<body style='margin:30px'>
+
+	<div id="navigationBar">
+
+	</div>
+
+
+
+<div class="well well-sm"
+	 style="background-image: url(../assets/class_raising_hands_300_wht.gif);background-size: contain;background-repeat: no-repeat; background-position: bottom;">
+	<div class="well well-sm">
+		<center>
+		<h3>Reset Your Password</h3>
+		
+			<div class="form-group">
+				<div class="form-group">
+					<input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email"
+						   placeholder="Email">
+				</div>
+
+				<br>
+				<br>
+				<button class="btn btn-primary" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+
+			</div>
+		</center>
+	</div>
+
+
+</div>
+
+
+
+
+
+
+	<script src="../script/sidenav.js"></script>
+	<script src="../script/index.js"></script>
+
+
+
+	<script type="module" src="../script/reset.js"></script>
+	<script>
+		function loadPage(href) {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", href, false);
+			xmlhttp.send();
+			return xmlhttp.responseText;
+		};
+	
+		document.getElementById('navigationBar').innerHTML =
+			loadPage('../html/navigation.html');
+	</script>
+
+
+</body>
+
+</html>

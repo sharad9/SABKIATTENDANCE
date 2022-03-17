@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.myDropdownHandle').dropdown('toggle');
+        });
+    </script>
+
+<link rel="stylesheet" href="../style/sidenav.css">
+
+</head>
+
+
+<body style='margin:30px'>
+
+<div id="navigationBar">
+
+</div>
+
+    <div class="well well-sm"
+         style="background-image: url(../assets/class_raising_hands_300_wht.gif);background-size: contain;background-repeat: no-repeat; background-position: bottom;">
+
+        <div class="well well-sm">
+            <h3>Register Your Id</h3>
+           
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button disabled="" id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
+                &nbsp;&nbsp;&nbsp;
+                <button id="quickstart-sign-up" class="btn btn-primary">Sign Up</button>
+            
+        </div>
+
+    <!-- Container where we'll display the user details -->
+        <div class="quickstart-user-details-container">
+            Firebase sign-in status: <span id="quickstart-sign-in-status">Signed out</span>
+            <div>Firebase auth <code>currentUser</code> object value:</div>
+            <pre><code id="user-position">null</code></pre>
+            <pre><code id="quickstart-account-details">null</code></pre>
+            <pre><code id="users-list">null</code></pre>
+        </div>
+    </div>
+
+
+    
+    <script src="../script/sidenav.js"></script>
+    <script src="../script/index.js"></script>
+   
+    <script type="module" src="../script/register.js"></script>
+    <script>
+		function loadPage(href) {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", href, false);
+			xmlhttp.send();
+			return xmlhttp.responseText;
+		};
+	
+		document.getElementById('navigationBar').innerHTML =
+			loadPage('../html/navigation.html');
+	</script>
+</body>
+
+</html>
